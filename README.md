@@ -17,24 +17,6 @@ For each cluster, the framework:
 7. Iterates until convergence.
 8. Computes nucleus density and Type-2 coverage for uncertainty-aware interpretation.
 
-For a point \(x\), let
-
-\[
-q_j(x)=(x-c_j)^T\Sigma_j^{-1}(x-c_j).
-\]
-
-The nucleus-distance rule used in the implementation is
-
-\[
-D_j(x)=
-\begin{cases}
-0, & q_j(x)\leq\tau_j^L,\\
-(\sqrt{q_j(x)}-\sqrt{\tau_j^L})^2, & q_j(x)>\tau_j^L.
-\end{cases}
-\]
-
-The point is assigned to the cluster with minimum \(D_j(x)\).
-
 ## Repository Notebooks
 
 | Notebook | Purpose |
